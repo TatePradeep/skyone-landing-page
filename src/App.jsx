@@ -43,17 +43,17 @@ function App() {
     
      </Canvas>
 
-
-
-     {/* <Canvas id='secondcanvas'
-     
-        shadows
-        gl={{ physicallyCorrectLights: true, preserveDrawingBuffer: true }}
+     <Canvas id='secondcanvas'
+    //  color='red'
+    //     shadows
+    //     gl={{ physicallyCorrectiLights: true, preserveDrawingBuffer: true }}
+    //     style={{ position: 'absolute', top: '100%' }}
       >
-        <SheetProvider sheet={sheet}>
-          <Scene2 />
-        </SheetProvider>
-      </Canvas> */}
+        <OrbitControls/>
+        <VR />
+      </Canvas>
+
+
      
     </>
   )
@@ -81,25 +81,8 @@ const Scene=()=>
   </>
 };
 
-// const Scene2 = () => {
-  
-//   // const sheet = useCurrentSheet();
-//   // const scroll = useScroll();
 
-//   // useFrame(() => {
-//   //   const sequenceLength = val(sheet.sequence.pointer.length);
-//   //   sheet.sequence.position = scroll.offset * sequenceLength;
-//   // });
 
-//   return (
-//     <>
-      
-//       <PerspectiveCamera theatreKey='Camera' makeDefault position={[1, 2, 6]} fov={90} near={0.1} far={70} />
-//       <color attach='background' args={['#BFB394']} />
-//       <hemisphereLight intensity={2} />
-//       <VR/>
-//     </>
-//   );
-// };
+
 
 

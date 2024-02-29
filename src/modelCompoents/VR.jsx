@@ -4,11 +4,12 @@ import {Html, useGLTF} from '@react-three/drei'
 
 const VR = () => {
 
-    const model=useGLTF('./VR-set-v1.glb')
+    const VRmodel=useGLTF('./VR-set-v1.glb')
+    console.log(VRmodel)
 
   return (
     <>
-      <primitive object={model.scene} scale={0.35}/>
+      <primitive object={VRmodel.scene} scale={9.35} position={[1,-6,1]}/>
     </>
   )
 }

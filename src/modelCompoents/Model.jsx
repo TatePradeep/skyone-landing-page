@@ -5,20 +5,6 @@ const Model = () => {
     const model=useGLTF('./CHNGSKYONE-v1.glb')
     console.log(model)
 
-    // let video=document.getElementById("video");
-
-    // let videoTexture=new THREE.VideoTexture(video);
-
-    // videoTexture.minFilter=THREE.LinearFilter;
-    // videoTexture.magFilter=THREE.LinearFilter;
-
-    // var movieMaterial=new THREE.MeshBasicMaterial({
-    //   map:videoTexture,
-    //   side:THREE.FrontSide,
-    //   toneMapped:false
-    // })
-
-    
 
   return (
     <>
