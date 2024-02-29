@@ -1,5 +1,5 @@
 import {Canvas,useFrame} from '@react-three/fiber'
-import { OrbitControls,Scroll,ScrollControls,useScroll } from '@react-three/drei'
+import { Environment, OrbitControls,Scroll,ScrollControls,useScroll } from '@react-three/drei'
 import {getProject,val} from '@theatre/core'
 import {editable as e, SheetProvider,PerspectiveCamera,useCurrentSheet} from '@theatre/r3f'
 import Model from './modelCompoents/Model'
@@ -20,7 +20,7 @@ function App() {
   
   return (
     <>
-  
+  <div style={{ position: 'relative',width:'100%',height:'100%' }}>
      <Canvas
      shadows
 
@@ -44,16 +44,19 @@ function App() {
      </Canvas>
 
      <Canvas id='secondcanvas'
-    //  color='red'
-    //     shadows
-    //     gl={{ physicallyCorrectiLights: true, preserveDrawingBuffer: true }}
-    //     style={{ position: 'absolute', top: '100%' }}
+     color='red'
+        shadows
+        gl={{ physicallyCorrectiLights: true, preserveDrawingBuffer: true }}
+    style={{ position: 'absolute', top: '100%' }}
       >
-        <OrbitControls/>
+
+        <Environment  background files={'./bg-vr.hdr'}/>
+        {/* <color args={['#a9996f']} attach={'background'}/> */}
+        <OrbitControls enableZoom={false} makeDefault />
         <VR />
       </Canvas>
 
-
+      </div>
      
     </>
   )
